@@ -5,7 +5,7 @@
  * Tilt your device to reveal more content.
  * e.g.: images in facebook's paper app.
  *
- * @Version: 1.0
+ * @Version: 1.0.1
  *
  *
  * Copyright (c) 2014 Martin Krause (jquery.public.mkrause.info)
