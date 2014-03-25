@@ -5,6 +5,9 @@ jQuery.tiltToReveal supports two different modes:
 - **treshold based**: as soons as the user tilts the device above the treshold angle the animation starts and runs the whole distance
 - **percentage based**: until the user tilts the device to the maximum angle the elements are animated. If the maximum angle is reached, the whole distance has been animated
 
+## Example
+- https://github.com/martinkr/jQuery.tiltToReveal/blob/master/demo.html
+
 ## API
 ```JavaScript
  	jQuery('.fx--tiltToReveal').tiltToReveal({
