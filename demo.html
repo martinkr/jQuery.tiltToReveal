@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=1024; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
 
 			<style type="text/css">
 				* {
@@ -21,36 +21,124 @@
 					width: 1024px;
 				}
 				section {
-
-					position: absolute;
-
-					-webkit-transform: translate3d(-250px, 0px, 0);
+					position: fixed;
+					top:0;
+					left:0;
+					overflow: hidden;
+					width:100%;
+					height: 100%;
 				}
+				img {
+					margin-top: -493px;
+					margin-left: -912px;
+					-webkit-transform: translate3d(0,0, 0);
+					left: 50%;
+					top: 50%;
+					position: absolute;
+				}
+
+				.signature {
+					display: block;
+					border: 2px solid transparent;
+					color: #efefef;
+					padding: 5px 10px 5px 30px;
+					opacity: 0.75;
+					font-family: "Avenir-Heavy", "Helvetica Neue", Arial;
+					font-size: 12px;
+					position: absolute;
+					right: 10px;
+					bottom: 5px;
+				}
+
+				.signature:before {
+					content: '';
+					display: block;
+					width: 1px;
+					border-left: 4px solid #222;
+					border-right: 4px solid #222;
+					height: 9px;
+					position: absolute;
+					left: 5px;
+					top: 50%;
+					margin-top: -5px;
+				}
+				.signature:after {
+					content: '';
+					display: block;
+					width: 1px;
+					border-left: 4px solid #222;
+					height: 9px;
+					position: absolute;
+					left: 15px;
+					top: 50%;
+					margin-top: -5px;
+
+				}
+				a:after {
+					content: '';
+					display: block;
+					width: 1px;
+					border-left: 4px solid #222;
+					height: 7px;
+					position: absolute;
+					left: 20px;
+					top: 50%;
+					margin-top: -3px;
+
+				}
+				.signature a,
+				.signature a:link,
+				.signature a:visited,
+				.signature a:hover,
+				.signature a:active {
+					color: #222;
+					text-decoration: none;
+				}
+
+				.signature a:before {
+					content: '';
+					display: block;
+					height: 0;
+					width: 100%;
+					background: #222;
+					position: absolute;
+					left: 0px;
+					top: 0;
+					z-index: -1;
+				}
+
+
+
 			</style>
 
 	<body>
 		<section>
 			<img src="demo.png" width="1824" height="986" class="fx--tiltToReveal">
+			<small class="signature"><a href="http://martinkr.github.io">martinkr.github.io</a></small>
 		</section>
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script src="jquery.tilttoreveal.min.js"></script>
 		<script>
 			jQuery(document).ready(function(){
-
 				// plugin defaults
+				 // return
 				$.fn.tiltToReveal.defaults = {
+					// we're not using the treshold version
 					useTreshold: false,
+					// move 375 on each side as soon as we tilt until we tilted to 10 degrees
 					leftright: {
-						distance: 250,
-						treshold: 10,
+						distance: 375,
+						// treshold: 10,
 						maxAngle: 10
 					},
+					// no front back movements for now
 					frontback: {
 						distance: 0,
-						treshold: 10,
-						maxAngle: 10
+						treshold: 0,
+						maxAngle: 0
 					},
+					// animation properties
 					animation : {
 						duration: 200,
 						easing: 'linear'
