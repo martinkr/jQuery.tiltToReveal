@@ -1,0 +1,32 @@
+{
+  "name": "tilttoreveal",
+  "main": "jquery.tilttoreveal.min.js",
+  "version": "1.0.5",
+  "homepage": "https://github.com/martinkr/jQuery.tiltToReveal",
+  "author": "Martin Krause",
+  "ignore": [
+    "*.jquery.json"
+  ],
+  "dependencies": {
+      "jquery": ">=1.7"
+  },
+  "description": "jQuery.tiltToReveal - Tilt your device to reveal more content, e.g.: images in facebook's paper app.",
+  "keywords": [
+      "tilt",
+      "devicemotion",
+      "iPad",
+      "iPhone",
+      "userexperience",
+      "effects",
+      "transition",
+      "csstransitions"
+  ],
+  "licenses": [
+      {
+          "type": "MIT",
+          "url": "http://opensource.org/licenses/MIT",
+          "type": "GPL-3.0",
+          "url": "http://opensource.org/licenses/gpl-3.0.html"
+      }
+  ]
+}
